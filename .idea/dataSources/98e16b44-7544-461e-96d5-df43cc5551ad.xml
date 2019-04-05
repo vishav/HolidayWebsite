@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - testdb2@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="testdb2">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="database_project"/>
+    <schema id="3" name="db_example"/>
+    <schema id="4" name="holidays"/>
+    <schema id="5" name="information_schema"/>
+    <schema id="6" name="my"/>
+    <schema id="7" name="mysql"/>
+    <schema id="8" name="performance_schema"/>
+    <schema id="9" name="pro4"/>
+    <schema id="10" name="pro5"/>
+    <schema id="11" name="sys"/>
+    <schema id="12" name="tainfo"/>
+    <schema id="13" name="tesr"/>
+    <schema id="14" name="test"/>
+    <schema id="15" name="testdb"/>
+    <table id="16" parent="1" name="cities"/>
+    <table id="17" parent="1" name="concerns_questions"/>
+    <table id="18" parent="1" name="countries"/>
+    <table id="19" parent="1" name="formula_notes"/>
+    <table id="20" parent="1" name="gregorian_kdayafteretc_monthday"/>
+    <table id="21" parent="1" name="gregorian_monthday"/>
+    <table id="22" parent="1" name="gregorian_monthday_moonphase"/>
+    <table id="23" parent="1" name="gregorian_monthday_special"/>
+    <table id="24" parent="1" name="gregorian_nthkdayofmonth"/>
+    <table id="25" parent="1" name="holiday_notes"/>
+    <table id="26" parent="1" name="holidays"/>
+    <table id="27" parent="1" name="holidays_locales_details"/>
+    <table id="28" parent="1" name="observance_rules"/>
+    <table id="29" parent="1" name="states"/>
+    <table id="30" parent="1" name="table_metadata"/>
+    <column id="31" parent="16" name="Id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="32" parent="16" name="Name">
+      <data-type>varchar(25)|0</data-type>
+    </column>
+    <column id="33" parent="16" name="State">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="34" parent="16" name="Country">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="35" parent="16" name="Country">
+      <columns>Country</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="36" parent="16" name="State">
+      <columns>State</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="37" parent="16" name="PRIMARY">
+      <columns>Id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="38" parent="16" name="cities_ibfk_1">
+      <columns>State</columns>
+      <ref-key>~.states.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>delete</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="39" parent="16" name="cities_ibfk_2">
+      <columns>Country</columns>
+      <ref-key>~.countries.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>delete</cascade-delete-rule>
+    </foreign-key>
+    <column id="40" parent="17" name="Id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="41" parent="17" name="Concern_Question">
+      <data-type>text|0</data-type>
+    </column>
+    <key id="42" parent="17" name="PRIMARY">
+      <columns>Id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="43" parent="18" name="Id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="44" parent="18" name="Name">
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <key id="45" parent="18" name="PRIMARY">
+      <columns>Id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="46" parent="19" name="Id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="47" parent="19" name="Formula_Note">
+      <data-type>text|0</data-type>
+    </column>
+    <key id="48" parent="19" name="PRIMARY">
+      <columns>Id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="49" parent="20" name="Id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="50" parent="20" name="Kday">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="51" parent="20" name="AfterEtc">
+      <data-type>varchar(3)|0</data-type>
+    </column>
+    <column id="52" parent="20" name="Month">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="53" parent="20" name="Day">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="54" parent="20" name="Offset">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="55" parent="20" name="PRIMARY">
+      <columns>Id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="56" parent="21" name="Id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="57" parent="21" name="Month">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="58" parent="21" name="Day">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="59" parent="21" name="Offset">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="60" parent="21" name="LeapYearAdjust">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="61" parent="21" name="PRIMARY">
+      <columns>Id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="62" parent="22" name="Id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="63" parent="22" name="Month">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="64" parent="22" name="Day">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="65" parent="22" name="MoonPhase">
+      <data-type>varchar(15)|0</data-type>
+    </column>
+    <column id="66" parent="22" name="Location">
+      <data-type>varchar(25)|0</data-type>
+    </column>
+    <column id="67" parent="22" name="Offset">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="68" parent="22" name="PRIMARY">
+      <columns>Id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="69" parent="23" name="Id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="70" parent="23" name="Month">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="71" parent="23" name="Day">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="72" parent="23" name="Offset">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="73" parent="23" name="LeapYearAdjust">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="74" parent="23" name="Description">
+      <data-type>tinytext|0</data-type>
+    </column>
+    <key id="75" parent="23" name="PRIMARY">
+      <columns>Id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="76" parent="24" name="Id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="77" parent="24" name="Nth">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="78" parent="24" name="Kday">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="79" parent="24" name="Month">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="80" parent="24" name="Offset">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="81" parent="24" name="PRIMARY">
+      <columns>Id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="82" parent="25" name="Id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="83" parent="25" name="Holiday_Note">
+      <data-type>text|0</data-type>
+    </column>
+    <key id="84" parent="25" name="PRIMARY">
+      <columns>Id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="85" parent="26" name="Id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="86" parent="26" name="Name">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <key id="87" parent="26" name="PRIMARY">
+      <columns>Id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="88" parent="27" name="Id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="89" parent="27" name="Holiday">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="90" parent="27" name="City">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="91" parent="27" name="State">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="92" parent="27" name="Country">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="93" parent="27" name="FormulaTableName">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="94" parent="27" name="FormulaId">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="95" parent="27" name="ObservanceRuleId">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="96" parent="27" name="NumberOfDays">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="97" parent="27" name="FormulaNoteId">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="98" parent="27" name="HolidayNoteId">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="99" parent="27" name="ConcernQuestionId">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="100" parent="27" name="BusinessesClosed">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="101" parent="27" name="BanksClosed">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="102" parent="27" name="ReligiousHoliday">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="103" parent="27" name="Dis">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="104" parent="27" name="HolidayType">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="105" parent="27" name="Religion">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="106" parent="27" name="MetroArea">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="107" parent="27" name="CheckManually">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <key id="108" parent="27" name="PRIMARY">
+      <columns>Id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="109" parent="28" name="Id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="110" parent="28" name="IfDay1a">
+      <data-type>varchar(3)|0</data-type>
+    </column>
+    <column id="111" parent="28" name="IfDay1b">
+      <data-type>varchar(3)|0</data-type>
+    </column>
+    <column id="112" parent="28" name="IfDay1c">
+      <data-type>varchar(3)|0</data-type>
+    </column>
+    <column id="113" parent="28" name="Add_ReplaceWith1">
+      <data-type>varchar(1)|0</data-type>
+    </column>
+    <column id="114" parent="28" name="Following_Preceding1">
+      <data-type>varchar(1)|0</data-type>
+    </column>
+    <column id="115" parent="28" name="OnDay1">
+      <data-type>varchar(3)|0</data-type>
+    </column>
+    <column id="116" parent="28" name="IfDay2a">
+      <data-type>varchar(3)|0</data-type>
+    </column>
+    <column id="117" parent="28" name="IfDay2b">
+      <data-type>varchar(3)|0</data-type>
+    </column>
+    <column id="118" parent="28" name="IfDay2c">
+      <data-type>varchar(3)|0</data-type>
+    </column>
+    <column id="119" parent="28" name="Add_ReplaceWith2">
+      <data-type>varchar(1)|0</data-type>
+    </column>
+    <column id="120" parent="28" name="Following_Preceding2">
+      <data-type>varchar(1)|0</data-type>
+    </column>
+    <column id="121" parent="28" name="OnDay2">
+      <data-type>varchar(3)|0</data-type>
+    </column>
+    <column id="122" parent="28" name="IfDay3a">
+      <data-type>varchar(3)|0</data-type>
+    </column>
+    <column id="123" parent="28" name="IfDay3b">
+      <data-type>varchar(3)|0</data-type>
+    </column>
+    <column id="124" parent="28" name="IfDay3c">
+      <data-type>varchar(3)|0</data-type>
+    </column>
+    <column id="125" parent="28" name="Add_ReplaceWith3">
+      <data-type>varchar(1)|0</data-type>
+    </column>
+    <column id="126" parent="28" name="Following_Preceding3">
+      <data-type>varchar(1)|0</data-type>
+    </column>
+    <column id="127" parent="28" name="OnDay3">
+      <data-type>varchar(3)|0</data-type>
+    </column>
+    <key id="128" parent="28" name="PRIMARY">
+      <columns>Id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="129" parent="29" name="Id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="130" parent="29" name="Name">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="131" parent="29" name="Country">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="132" parent="29" name="Country">
+      <columns>Country</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="133" parent="29" name="PRIMARY">
+      <columns>Id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="134" parent="29" name="states_ibfk_1">
+      <columns>Country</columns>
+      <ref-key>~.countries.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>delete</cascade-delete-rule>
+    </foreign-key>
+    <column id="135" parent="30" name="column_name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="136" parent="30" name="table_name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="137" parent="30" name="PRIMARY">
+      <columns>column_name
+table_name</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>

@@ -1,0 +1,34 @@
+<!-- general add dialog -->
+<div mat-dialog-content *ngIf="data.searchMenus === undefined">
+  <h1 mat-dialog-title>ADD A HOLIDAY RECORD</h1>
+  <div mat-dialog-content *ngFor="let field of data.fields">
+    <mat-form-field  *ngIf="field!=='delete' && field != 'update' && field !='id' && field !='select'" style="width:300px !important">
+      <input matInput   placeholder="{{field}}" [(ngModel)]="data[data.entityName][field]" name="name">
+    </mat-form-field>
+  </div>
+</div>
+<!-- specific add dialog (for tables which have relationship with other tables -->
+<div mat-dialog-content *ngIf="data.searchMenus !== undefined">
+  <h1 mat-dialog-title>ADD A HOLIDAY RECORD</h1>
+  <div mat-dialog-content *ngFor="let field of data.fields">
+    <mat-form-field  *ngIf="data.searchMenus[field]===undefined && field!=='delete' && field != 'update' && field !='id' && field !='select'" style="width:300px !important">
+      <input matInput   placeholder="{{field}}" [(ngModel)]="data[data.entityName][field]" name="name">
+    </mat-form-field>
+
+    <mat-form-field *ngIf="data.searchMenus[field]!==undefined && data.searchMenus[field][0]['name'] !== undefined" style="width:300px !important">
+      <mat-label>{{field}}</mat-label>
+      <mat-select #fontSize value="16px" [(ngModel)]="data[data.entityName][field]" >
+        <!-- <mat-option *ngFor="let value of selectFields[field]" [value]="mappingFields[field][value]"> -->
+        <mat-option>None</mat-option>
+        <mat-option *ngFor="let value of data.searchMenus[field]" [value]="value.id">
+          {{value.name}} (id: {{value.id}})
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button type="submit" (click)="onAddClick()">Add</button>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+</div>

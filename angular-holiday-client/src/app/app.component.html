@@ -1,0 +1,37 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div style="text-align:center" layout="column" >
+
+  <h1>{{ title }}</h1>
+  <div>
+
+  <mat-toolbar layout="row" >
+    <div class="example-button-row">
+
+      <button mat-button ><nav>
+        <a routerLink="/showHolidays">Home</a>
+      </nav></button>
+      <button mat-button [matMenuTriggerFor]="menu">Tables</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item><a routerLink="/holidays">Holidays</a></button>
+        <button mat-menu-item><a routerLink="/cities">Cities</a></button>
+        <button mat-menu-item><a routerLink="/states">States</a></button>
+        <button mat-menu-item><a routerLink="/countries">Countries</a></button>
+        <button mat-menu-item><a routerLink="/holidaysLocalesDetails">Holidays_locales_details</a></button>
+        <button mat-menu-item><a routerLink="/concernsQuestions">concerns_questions</a></button>
+        <button mat-menu-item><a routerLink="/holidayNotes">holiday_notes</a></button>
+        <button mat-menu-item><a routerLink="/formulaNotes">formula_notes</a></button>
+        <button mat-menu-item><a routerLink="/gregorianMonthdayMoonphase">gregorian_monthday_moonphase</a></button>
+        <button mat-menu-item><a routerLink="/gregorianMonthday">gregorian_monthday</a></button>
+        <button mat-menu-item><a routerLink="/gregorianKdayafteretcMonthday">gregorian_kdayafteretc_monthday</a></button>
+        <button mat-menu-item><a routerLink="/gregorianMonthdaySpecial">gregorian_monthday_special</a></button>
+        <button mat-menu-item><a routerLink="/gregorianNthkdayofmonth">gregorian_nthkdayofmonth</a></button>
+      </mat-menu>
+    </div>
+    </mat-toolbar>
+
+
+  </div>
+ <!--<table-pagination-example></table-pagination-example> -->
+</div>
+<router-outlet></router-outlet>

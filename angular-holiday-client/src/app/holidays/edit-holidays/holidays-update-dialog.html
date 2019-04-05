@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>UPDATE A HOLIDAY RECORD</h1>
+<div mat-dialog-content>
+  <mat-form-field  *ngFor="let field of data.fields">
+    <div *ngIf="field=== 'id' "><input matInput  placeholder="{{field}}" [(ngModel)]="data.holiday[field]" name="name" disabled></div>
+    <div *ngIf="field !== 'id' "><input matInput  placeholder="{{field}}" [(ngModel)]="data.holiday[field]" name="name"></div>
+    <br/>
+  </mat-form-field>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button type="submit" (click)="onUpdateClick()">Update</button>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+</div>

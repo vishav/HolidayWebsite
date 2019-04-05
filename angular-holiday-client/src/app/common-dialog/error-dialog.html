@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Sorry, operation fail! </h1>
+<div mat-dialog-content>
+  <div *ngIf="data.error.error !== undefined">
+       {{data.error.error.message}}
+  </div>
+  <div *ngIf="data.error.error === undefined">
+       {{data.error}}
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onOkayClick()">OK</button>
+</div>

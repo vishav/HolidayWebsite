@@ -1,0 +1,40 @@
+<div mat-dialog-content >
+  <h1 mat-dialog-title>ADD A RECORD</h1>
+  <div mat-dialog-content *ngFor="let field of data.fields"> <!--
+  <mat-form-field *ngFor="let field of data.fields">
+    <input matInput  placeholder="{{field}}" [(ngModel)]="data.holidaysLocalesDetails[field]" name="name">
+    <br/>
+  </mat-form-field>
+</div> -->
+  <!-- <mat-form-field  *ngIf="selectFields[field]===undefined" style="width:300px !important"> -->
+  <mat-form-field  *ngIf="data.searchMenus[field]===undefined && field!=='delete' && field != 'update' && field !='id' && field !='select'" style="width:300px !important">
+    <input matInput   placeholder="{{field}}" [(ngModel)]="data.holidaysLocalesDetails[field]" name="name">
+  </mat-form-field>
+  <mat-form-field *ngIf="data.searchMenus[field]!==undefined && data.searchMenus[field][0]['name']!== undefined" style="width:300px !important">
+    <mat-label>{{field}}</mat-label>
+    <mat-select #fontSize value="16px" [(ngModel)]="data.holidaysLocalesDetails[field]" >
+
+      <mat-option>None</mat-option>
+      <mat-option *ngFor="let value of data.searchMenus[field]" [value]="value.id">
+        {{value.name}} (id: {{value.id}})
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field *ngIf="data.searchMenus[field]!==undefined && data.searchMenus[field][0]['name']=== undefined" style="width:300px !important">
+    <mat-label>{{field}}</mat-label>
+    <mat-select #fontSize value="16px" [(ngModel)]="data.holidaysLocalesDetails[field]" >
+      <!-- <mat-option *ngFor="let value of selectFields[field]" [value]="mappingFields[field][value]"> -->
+      <mat-option>None</mat-option>
+      <mat-option *ngFor="let value of data.searchMenus[field]" [value]="value">
+        {{value}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+  </div>
+<div mat-dialog-actions>
+
+  <button mat-button type="submit" (click)="onSubmitClick()">Add</button>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+</div>
