@@ -30,6 +30,8 @@ export class CitiesComponent implements OnInit {
   searchSource: MatTableDataSource<any>;
   cities: Observable<City[]>;
   displayedColumns : string[] = [];
+  tempcountrys= new Map();
+  tempstates= new Map();
 
   isShowSearchTable= 'none';
   isShowGeneralTable = 'block';
@@ -63,12 +65,18 @@ export class CitiesComponent implements OnInit {
         //this.states = states;
         this.searchMenus['country'] = countrys;
         // console.log(" loading data country ", this.mappingData['country']);
+        for (var i=0;i<countrys.length;i++){
+          this.tempcountrys.set(countrys[i]['id'],countrys[i]['name']);
+        }
       });
 
     this.statesService
       .getStates()
       .subscribe(states => {
         this.searchMenus['state'] = states;
+        for (var i=0;i<states.length;i++){
+          this.tempstates.set(states[i]['id'],states[i]['name']);
+        }
       },
         error =>{
           const dialogRef = this.dialog.open(CommonErrorDialog, {

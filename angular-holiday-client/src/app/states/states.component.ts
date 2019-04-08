@@ -29,6 +29,7 @@ export class StatesComponent implements OnInit {
   dataSource: MatTableDataSource<any>;
   states: Observable<State[]>;
   displayedColumns: string[] = [];
+  tempcountrys= new Map();
 
   isShowSearchTable = 'none';
   isShowGeneralTable = 'block';
@@ -65,6 +66,10 @@ export class StatesComponent implements OnInit {
         //this.states = states;
         this.searchMenus['country'] = countrys;
         // console.log(" loading data country ", this.mappingData['country']);
+        console.log(countrys);
+        for (var i=0;i<countrys.length;i++){
+          this.tempcountrys.set(countrys[i]['id'],countrys[i]['name'])
+        }
       });
   }
 

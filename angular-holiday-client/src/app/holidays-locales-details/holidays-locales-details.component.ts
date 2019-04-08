@@ -47,6 +47,12 @@ export class HolidaysLocalesDetailsComponent implements OnInit {
                   'city':[],
                 };
 
+  tempcountrys= new Map();
+  tempstates= new Map();
+  tempcities= new Map();
+  tempholidays= new Map();
+
+
   // variable use for checkbox and selected and deleted
   selection = new SelectionModel<any>(true, []);
   deleteObjects: any;
@@ -125,7 +131,9 @@ export class HolidaysLocalesDetailsComponent implements OnInit {
         this.holidays = holidays;
       // this.mappingData['holiday'] = holidays;
         this.searchMenus['holiday'] = holidays;
-
+        for (var i=0;i<holidays.length;i++){
+          this.tempholidays.set(holidays[i]['id'],holidays[i]['name']);
+        }
       });
 
     this.statesService
@@ -136,6 +144,9 @@ export class HolidaysLocalesDetailsComponent implements OnInit {
      //   this.mappingData['state'] = states;
         this.searchMenus['state'] = states;
      //   console.log(" loading data state ", this.mappingData['state']);
+        for (var i=0;i<states.length;i++){
+          this.tempstates.set(states[i]['id'],states[i]['name']);
+        }
       });
 
     this.countryService
@@ -145,12 +156,18 @@ export class HolidaysLocalesDetailsComponent implements OnInit {
      //   this.mappingData['country'] = countrys;
         this.searchMenus['country'] = countrys;
     //    console.log(" loading data country ", this.mappingData['country']);
+        for (var i=0;i<countrys.length;i++){
+          this.tempcountrys.set(countrys[i]['id'],countrys[i]['name']);
+        }
       });
 
     this.cityService
       .getCities()
       .subscribe(cities => {
-        this.searchMenus['city'] = cities
+        this.searchMenus['city'] = cities;
+        for (var i=0;i<cities.length;i++){
+          this.tempcities.set(cities[i]['id'],cities[i]['name']);
+        }
         });
 
   }
