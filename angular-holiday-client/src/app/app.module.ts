@@ -48,6 +48,19 @@ import { GregorianMonthdayComponent } from './gregorian-monthday/gregorian-month
 import { GregorianKdayafteretcMonthdayComponent } from './gregorian-kdayafteretc-monthday/gregorian-kdayafteretc-monthday.component';
 import { GregorianMonthdaySpecialComponent } from './gregorian-monthday-special/gregorian-monthday-special.component';
 import { GregorianNthkdayofmonthComponent } from './gregorian-nthkdayofmonth/gregorian-nthkdayofmonth.component';
+import { ChineseComponent } from './chinese/chinese.component';
+import { EcclesiasticalGregorianComponent } from './ecclesiastical-gregorian/ecclesiastical-gregorian.component';
+import { EcclesiasticalOrthodoxComponent } from './ecclesiastical-orthodox/ecclesiastical-orthodox.component';
+import { HebrewComponent } from './hebrew/hebrew.component';
+import { HebrewSpecialComponent } from './hebrew-special/hebrew-special.component';
+import { HinduLunarComponent } from './hindu-lunar/hindu-lunar.component';
+import { HinduLunarMoonphaseComponent } from './hindu-lunar-moonphase/hindu-lunar-moonphase.component';
+import { HinduLunarSpecialComponent } from './hindu-lunar-special/hindu-lunar-special.component';
+import { HinduSolarComponent } from './hindu-solar/hindu-solar.component';
+import { HinduSolarSpecialComponent } from './hindu-solar-special/hindu-solar-special.component';
+import { IslamicComponent } from './islamic/islamic.component';
+import { IslamicSpecialComponent } from './islamic-special/islamic-special.component';
+import { RegionsComponent } from './regions/regions.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -82,6 +95,19 @@ import { GregorianNthkdayofmonthComponent } from './gregorian-nthkdayofmonth/gre
     CommonAdvSearchDialog,
     CommonErrorDialog,
     CommonComponent,
+    ChineseComponent,
+    EcclesiasticalGregorianComponent,
+    EcclesiasticalOrthodoxComponent,
+    HebrewComponent,
+    HebrewSpecialComponent,
+    HinduLunarComponent,
+    HinduLunarMoonphaseComponent,
+    HinduLunarSpecialComponent,
+    HinduSolarComponent,
+    HinduSolarSpecialComponent,
+    IslamicComponent,
+    IslamicSpecialComponent,
+    RegionsComponent,
 
 ],
   imports: [

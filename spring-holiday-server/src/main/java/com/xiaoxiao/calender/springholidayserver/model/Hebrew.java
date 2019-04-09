@@ -2,15 +2,14 @@ package com.xiaoxiao.calender.springholidayserver.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name ="GregorianMonthday")
-public class GregorianMonthday {
+@Table(name ="Hebrew")
+public class Hebrew {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY )
   private Long id;
   private Long month;
   private Long day;
   private Long offset;
-  private Long leapyearadjust;
 
   public Long getId() {
     return id;
@@ -42,13 +41,5 @@ public class GregorianMonthday {
 
   public void setOffset(Long offset) {
     this.offset = offset;
-  }
-
-  public Long getLeapyearadjust() {
-    return leapyearadjust;
-  }
-
-  public void setLeapyearadjust(Long leapyearadjust) {
-    this.leapyearadjust = leapyearadjust;
   }
 }

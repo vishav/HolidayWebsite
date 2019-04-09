@@ -103,3 +103,100 @@ export class GregorianMonthdaySpecial {
   description: string;
 }
 
+export class Chinese {
+  id: number;
+  month: number;
+  day: number;
+  offset: number;
+  leapmonth: string;
+}
+
+export class EcclesiasticalGregorian {
+  id: number;
+  daysfromeaster: number;
+}
+
+export class EcclesiasticalOrthodox {
+  id: number;
+  daysfromeaster: number;
+}
+
+export class Hebrew {
+  id: number;
+  month: number;
+  day: number;
+  offset: number;
+}
+
+export class HebrewSpecial {
+  id: number;
+  month: number;
+  day: number;
+  offset: number;
+  description: string;
+}
+
+export class HinduLunar {
+  id: number;
+  month: number;
+  day: number;
+  offset: number;
+  leapmonth: string;
+  leapday: string;
+}
+
+export class HinduLunarMoonphase {
+  id: number;
+  month: number;
+  day: number;
+  offset: number;
+  leapmonth: string;
+}
+
+export class HinduLunarSpecial {
+  id: number;
+  month: number;
+  day: number;
+  offset: number;
+  leapmonth: string;
+}
+
+export class HinduSolar {
+  id: number;
+  month: number;
+  day: number;
+  offset: number;
+  leapmonth: string;
+}
+
+export class HinduSolarSpecial {
+  id: number;
+  month: number;
+  day: number;
+  offset: number;
+  leapmonth: string;
+}
+
+export class Islamic {
+  id: number;
+  month: number;
+  day: number;
+  offset: number;
+  leapmonth: string;
+}
+
+export class IslamicSpecial {
+  id: number;
+  month: number;
+  day: number;
+  offset: number;
+  leapmonth: string;
+}
+
+export class Regions {
+  id: number;
+  month: number;
+  day: number;
+  offset: number;
+  leapmonth: string;
+}

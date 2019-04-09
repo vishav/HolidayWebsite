@@ -7,7 +7,10 @@ import {
 } from "../common-dialog/common-component";
 import {
   HolidayNotes, FormulaNotes, ConcernsQuestions, GregorianMonthdayMoonphase,
-  GregorianMonthday, GregorianKdayafteretcMonthday, GregorianMonthdaySpecial, GregorianNthkdayofmonth
+  GregorianMonthday, GregorianKdayafteretcMonthday, GregorianMonthdaySpecial, 
+  GregorianNthkdayofmonth, Chinese, EcclesiasticalGregorian, EcclesiasticalOrthodox,
+  Hebrew, HebrewSpecial, HinduLunar, HinduLunarMoonphase, HinduLunarSpecial, HinduSolar,
+  HinduSolarSpecial, Islamic, IslamicSpecial, Regions
 } from "../spring-calender-server";
 
 
@@ -393,10 +396,87 @@ export class CommonComponent implements OnInit {
         this.addObject = new GregorianNthkdayofmonth();
         this.updateObject = new GregorianNthkdayofmonth();
         this.searchObject = new GregorianNthkdayofmonth();
-          this.deleteObjects = [];
+        this.deleteObjects = [];
+      case "Chinese":
+        this.deleteObjects = new Chinese();
+        this.addObject = new Chinese();
+        this.updateObject = new Chinese();
+        this.searchObject = new Chinese();
+        this.deleteObjects = [];
+      case "EcclesiasticalGregorian":
+        this.deleteObjects = new EcclesiasticalGregorian();
+        this.addObject = new EcclesiasticalGregorian();
+        this.updateObject = new EcclesiasticalGregorian();
+        this.searchObject = new EcclesiasticalGregorian();
+        this.deleteObjects = [];
+      case "EcclesiasticalOrthodox":
+        this.deleteObjects = new EcclesiasticalOrthodox();
+        this.addObject = new EcclesiasticalOrthodox();
+        this.updateObject = new EcclesiasticalOrthodox();
+        this.searchObject = new EcclesiasticalOrthodox();
+        this.deleteObjects = [];
+      case "Hebrew":
+        this.deleteObjects = new Hebrew();
+        this.addObject = new Hebrew();
+        this.updateObject = new Hebrew();
+        this.searchObject = new Hebrew();
+        this.deleteObjects = [];
+      case "HebrewSpecial":
+        this.deleteObjects = new HebrewSpecial();
+        this.addObject = new HebrewSpecial();
+        this.updateObject = new HebrewSpecial();
+        this.searchObject = new HebrewSpecial();
+        this.deleteObjects = [];
+      case "HinduLunar":
+        this.deleteObjects = new HinduLunar();
+        this.addObject = new HinduLunar();
+        this.updateObject = new HinduLunar();
+        this.searchObject = new HinduLunar();
+        this.deleteObjects = [];
+      case "HinduLunarMoonphase":
+        this.deleteObjects = new HinduLunarMoonphase();
+        this.addObject = new HinduLunarMoonphase();
+        this.updateObject = new HinduLunarMoonphase();
+        this.searchObject = new HinduLunarMoonphase();
+        this.deleteObjects = [];
+      case "HinduLunarSpecial":
+        this.deleteObjects = new HinduLunarSpecial();
+        this.addObject = new HinduLunarSpecial();
+        this.updateObject = new HinduLunarSpecial();
+        this.searchObject = new HinduLunarSpecial();
+        this.deleteObjects = [];
+      case "HinduSolar":
+        this.deleteObjects = new HinduSolar();
+        this.addObject = new HinduSolar();
+        this.updateObject = new HinduSolar();
+        this.searchObject = new HinduSolar();
+        this.deleteObjects = [];
+      case "HinduSolarSpecial":
+        this.deleteObjects = new HinduSolarSpecial();
+        this.addObject = new HinduSolarSpecial();
+        this.updateObject = new HinduSolarSpecial();
+        this.searchObject = new HinduSolarSpecial();
+        this.deleteObjects = [];
+      case "Islamic":
+        this.deleteObjects = new Islamic();
+        this.addObject = new Islamic();
+        this.updateObject = new Islamic();
+        this.searchObject = new Islamic();
+        this.deleteObjects = [];
+      case "IslamicSpecial":
+        this.deleteObjects = new IslamicSpecial();
+        this.addObject = new IslamicSpecial();
+        this.updateObject = new IslamicSpecial();
+        this.searchObject = new IslamicSpecial();
+        this.deleteObjects = [];
+      case "Regions":
+        this.deleteObjects = new Regions();
+        this.addObject = new Regions();
+        this.updateObject = new Regions();
+        this.searchObject = new Regions();
+        this.deleteObjects = [];
         break;
       default:
-
     }
   }
 

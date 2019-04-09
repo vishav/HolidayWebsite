@@ -14,6 +14,20 @@ import {GregorianMonthdayComponent} from "./gregorian-monthday/gregorian-monthda
 import {GregorianKdayafteretcMonthdayComponent} from "./gregorian-kdayafteretc-monthday/gregorian-kdayafteretc-monthday.component";
 import {GregorianMonthdaySpecialComponent} from "./gregorian-monthday-special/gregorian-monthday-special.component";
 import {GregorianNthkdayofmonthComponent} from "./gregorian-nthkdayofmonth/gregorian-nthkdayofmonth.component";
+import {ChineseComponent} from "./chinese/chinese.component";
+import {EcclesiasticalGregorianComponent} from "./ecclesiastical-gregorian/ecclesiastical-gregorian.component";
+import {EcclesiasticalOrthodoxComponent} from "./ecclesiastical-orthodox/ecclesiastical-orthodox.component";
+import {HebrewComponent} from "./hebrew/hebrew.component";
+import {HebrewSpecialComponent} from "./hebrew-special/hebrew-special.component";
+import {HinduLunarComponent} from "./hindu-lunar/hindu-lunar.component";
+import {HinduLunarMoonphaseComponent} from "./hindu-lunar-moonphase/hindu-lunar-moonphase.component";
+import {HinduLunarSpecialComponent} from "./hindu-lunar-special/hindu-lunar-special.component";
+import {HinduSolarComponent} from "./hindu-solar/hindu-solar.component";
+import {HinduSolarSpecialComponent} from "./hindu-solar-special/hindu-solar-special.component";
+import {IslamicComponent} from "./islamic/islamic.component";
+import {IslamicSpecialComponent} from "./islamic-special/islamic-special.component";
+import {RegionsComponent} from "./regions/regions.component";
+
 const routes: Routes = [
   { path: '', redirectTo: 'showHolidays', pathMatch: 'full' },
   { path: 'showHolidays', component: ShowHolidaysComponent },
@@ -29,7 +43,20 @@ const routes: Routes = [
   { path: 'gregorianMonthdayMoonphase', component:GregorianMonthdayMoonphaseComponent},
   { path: 'gregorianKdayafteretcMonthday',component: GregorianKdayafteretcMonthdayComponent},
   { path: 'gregorianMonthdaySpecial',component: GregorianMonthdaySpecialComponent},
-  { path: 'gregorianNthkdayofmonth',component: GregorianNthkdayofmonthComponent}
+  { path: 'gregorianNthkdayofmonth',component: GregorianNthkdayofmonthComponent},
+  { path: 'chinese',component: ChineseComponent},
+  { path: 'ecclesiasticalGregorian',component: EcclesiasticalGregorianComponent},
+  { path: 'ecclesiasticalOrthodox',component: EcclesiasticalOrthodoxComponent},
+  { path: 'hebrew',component: HebrewComponent},
+  { path: 'hebrewSpecial',component: HebrewSpecialComponent},
+  { path: 'hinduLunar',component: HinduLunarComponent},
+  { path: 'hinduLunarMoonphase',component: HinduLunarMoonphaseComponent},
+  { path: 'hinduLunarSpecial',component: HinduLunarSpecialComponent},
+  { path: 'hinduSolar',component: HinduSolarComponent},
+  { path: 'hinduSolarSpecial',component: HinduSolarSpecialComponent},
+  { path: 'islamic',component: IslamicComponent},
+  { path: 'islamicSpecial',component: IslamicSpecialComponent},
+  { path: 'regions',component: RegionsComponent}
 ];
 
 @NgModule({
