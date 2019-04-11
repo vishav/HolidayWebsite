@@ -7,7 +7,7 @@ public class HebrewSpecial {
   public HebrewSpecial() {
   }
 
-  public HebrewSpecial(Long month, Long day, Long offset, Long leapyearadjust, String description) {
+  public HebrewSpecial(Long month, Long day, Long offset, String description) {
     this.month = month;
     this.day = day;
     this.offset = offset;
