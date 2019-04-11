@@ -187,7 +187,6 @@ export class Islamic {
   month: number;
   day: number;
   offset: number;
-  leapmonth: string;
 }
 
 export class IslamicSpecial {
