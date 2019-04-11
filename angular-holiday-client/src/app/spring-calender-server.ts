@@ -194,7 +194,7 @@ export class IslamicSpecial {
   month: number;
   day: number;
   offset: number;
-  leapmonth: string;
+  description: string;
 }
 
 export class Regions {
