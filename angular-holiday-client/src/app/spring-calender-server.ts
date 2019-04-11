@@ -149,8 +149,11 @@ export class HinduLunarMoonphase {
   id: number;
   month: number;
   day: number;
+  moonphase: string;
+  location: string;
   offset: number;
   leapmonth: string;
+  leapday: string;
 }
 
 export class HinduLunarSpecial {
@@ -159,6 +162,9 @@ export class HinduLunarSpecial {
   day: number;
   offset: number;
   leapmonth: string;
+  leapday: string;
+  description: string;
+
 }
 
 export class HinduSolar {
@@ -166,7 +172,6 @@ export class HinduSolar {
   month: number;
   day: number;
   offset: number;
-  leapmonth: string;
 }
 
 export class HinduSolarSpecial {
@@ -174,7 +179,7 @@ export class HinduSolarSpecial {
   month: number;
   day: number;
   offset: number;
-  leapmonth: string;
+  description: string;
 }
 
 export class Islamic {
