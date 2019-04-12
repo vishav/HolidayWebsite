@@ -2,7 +2,7 @@ package com.xiaoxiao.calender.springholidayserver.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name ="Gregorian_monthday_special")
+@Table(name ="gregorian_monthday_special")
 public class GregorianMonthdaySpecial {
   public GregorianMonthdaySpecial() {
   }

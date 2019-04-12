@@ -2,7 +2,7 @@ package com.xiaoxiao.calender.springholidayserver.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name ="HebrewSpecial")
+@Table(name ="hebrew_special")
 public class HebrewSpecial {
   public HebrewSpecial() {
   }

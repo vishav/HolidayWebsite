@@ -6,7 +6,7 @@ import {
   CommonAdvSearchDialog
 } from "../common-dialog/common-component";
 import {
-  HolidayNotes, FormulaNotes, ConcernsQuestions, GregorianMonthdayMoonphase,
+  HolidayNotes, FormulaNotes, FormulaExtensions, ConcernsQuestions, GregorianMonthdayMoonphase,
   GregorianMonthday, GregorianKdayafteretcMonthday, GregorianMonthdaySpecial, 
   GregorianNthkdayofmonth, Chinese, EcclesiasticalGregorian, EcclesiasticalOrthodox,
   Hebrew, HebrewSpecial, HinduLunar, HinduLunarMoonphase, HinduLunarSpecial, OldHinduLunar,
@@ -354,6 +354,13 @@ export class CommonComponent implements OnInit {
         this.deleteObject = new FormulaNotes();
         this.updateObject = new FormulaNotes();
         this.searchObject = new FormulaNotes();
+        this.deleteObjects = [];
+            break;
+      case "FormulaExtensions":
+        this.addObject = new FormulaExtensions();
+        this.deleteObject = new FormulaExtensions();
+        this.updateObject = new FormulaExtensions();
+        this.searchObject = new FormulaExtensions();
         this.deleteObjects = [];
             break;
       case "ConcernsQuestions":

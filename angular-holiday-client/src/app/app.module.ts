@@ -64,6 +64,7 @@ import { RegionsComponent } from './regions/regions.component';
 import { OldHinduLunarComponent } from './old-hindu-lunar/old-hindu-lunar.component';
 import { OldHinduLunarMoonphaseComponent } from './old-hindu-lunar-moonphase/old-hindu-lunar-moonphase.component';
 import { OldHinduLunarSpecialComponent } from './old-hindu-lunar-special/old-hindu-lunar-special.component';
+import { FormulaExtensionsComponent } from './formula-extensions/formula-extensions.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -114,6 +115,7 @@ import { OldHinduLunarSpecialComponent } from './old-hindu-lunar-special/old-hin
     OldHinduLunarComponent,
     OldHinduLunarMoonphaseComponent,
     OldHinduLunarSpecialComponent,
+    FormulaExtensionsComponent,
 
 ],
   imports: [

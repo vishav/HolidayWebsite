@@ -2,16 +2,15 @@ package com.xiaoxiao.calender.springholidayserver.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name ="old_hindu_lunar_moonphase")
-public class OldHinduLunarMoonphase {
-  public OldHinduLunarMoonphase() {
+@Table(name ="old_hindu_lunar_special")
+public class OldHinduLunarSpecial {
+  public OldHinduLunarSpecial() {
   }
 
-  public OldHinduLunarMoonphase(Long month, Long day, String moonphase, String location, Long offset, String leapmonth) {
+  public OldHinduLunarSpecial(Long month, Long day, String description, Long offset, String leapmonth) {
     this.month = month;
     this.day = day;
-    this.moonphase = moonphase;
-    this.location = location;
+    this.description = description;
     this.offset = offset;
     this.leapmonth=leapmonth;
   }
@@ -22,8 +21,7 @@ public class OldHinduLunarMoonphase {
   private Long id;
   private Long month;
   private Long day;
-  private String moonphase;
-  private String location;
+  private String description;
   private Long offset;
   private String leapmonth;
 
@@ -51,20 +49,12 @@ public class OldHinduLunarMoonphase {
     this.day = day;
   }
 
-  public String getMoonphase() {
-    return moonphase;
+  public String getDescription() {
+    return description;
   }
 
-  public void setMoonphase(String moonphase) {
-    this.moonphase = moonphase;
-  }
-
-  public String getLocation() {
-    return location;
-  }
-
-  public void setLocation(String location) {
-    this.location = location;
+  public void setDescription(String description) {
+    this.description = description;
   }
 
   public Long getOffset() {

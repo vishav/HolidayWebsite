@@ -2,7 +2,7 @@ package com.xiaoxiao.calender.springholidayserver.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name ="Islamic")
+@Table(name ="islamic")
 public class Islamic {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY )

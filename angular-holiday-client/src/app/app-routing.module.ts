@@ -9,6 +9,7 @@ import {StatesComponent} from "./states/states.component";
 import {CitiesComponent} from "./cities/cities.component";
 import {HolidayNotesComponent} from "./holiday-notes/holiday-notes.component";
 import {FormulaNotesComponent} from "./formula-notes/formula-notes.component";
+import {FormulaExtensionsComponent} from "./formula-extensions/formula-extensions.component";
 import {GregorianMonthdayMoonphaseComponent} from "./gregorian-monthday-moonphase/gregorian-monthday-moonphase.component";
 import {GregorianMonthdayComponent} from "./gregorian-monthday/gregorian-monthday.component";
 import {GregorianKdayafteretcMonthdayComponent} from "./gregorian-kdayafteretc-monthday/gregorian-kdayafteretc-monthday.component";
@@ -42,6 +43,7 @@ const routes: Routes = [
   { path: 'cities', component: CitiesComponent },
   { path: 'holidayNotes', component: HolidayNotesComponent },
   { path: 'formulaNotes', component: FormulaNotesComponent },
+  { path: 'formulaExtensions', component: FormulaExtensionsComponent },
   { path: 'gregorianMonthday', component:GregorianMonthdayComponent},
   { path: 'gregorianMonthdayMoonphase', component:GregorianMonthdayMoonphaseComponent},
   { path: 'gregorianKdayafteretcMonthday',component: GregorianKdayafteretcMonthdayComponent},

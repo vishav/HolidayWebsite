@@ -60,6 +60,28 @@ export class FormulaNotes {
   formulaNote: string;
 }
 
+export class FormulaExtensions {
+  id: number;
+  ifDay1a: string;
+  ifDay1b: string;
+  ifDay1c: string;
+  add_replaceWith1: string;
+  following_preceding1: string;
+  onDay1: string;
+  ifDay2a: string;
+  ifDay2b: string;
+  ifDay2c: string;
+  add_replaceWith2: string;
+  following_preceding2: string;
+  onDay2: string;
+  ifDay3a: string;
+  ifDay3b: string;
+  ifDay3c: string;
+  add_replaceWith3: string;
+  following_preceding3: string;
+  onDay3: string;
+}
+
 export class GregorianNthkdayofmonth {
   id: number;
   nth: number;
