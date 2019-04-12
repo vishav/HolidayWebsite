@@ -9,7 +9,8 @@ import {
   HolidayNotes, FormulaNotes, ConcernsQuestions, GregorianMonthdayMoonphase,
   GregorianMonthday, GregorianKdayafteretcMonthday, GregorianMonthdaySpecial, 
   GregorianNthkdayofmonth, Chinese, EcclesiasticalGregorian, EcclesiasticalOrthodox,
-  Hebrew, HebrewSpecial, HinduLunar, HinduLunarMoonphase, HinduLunarSpecial, HinduSolar,
+  Hebrew, HebrewSpecial, HinduLunar, HinduLunarMoonphase, HinduLunarSpecial, OldHinduLunar,
+  OldHinduLunarMoonphase, OldHinduLunarSpecial, HinduSolar,
   HinduSolarSpecial, Islamic, IslamicSpecial, Regions
 } from "../spring-calender-server";
 
@@ -444,6 +445,24 @@ export class CommonComponent implements OnInit {
         this.addObject = new HinduLunarSpecial();
         this.updateObject = new HinduLunarSpecial();
         this.searchObject = new HinduLunarSpecial();
+        this.deleteObjects = [];
+      case "OldHinduLunar":
+        this.deleteObjects = new OldHinduLunar();
+        this.addObject = new OldHinduLunar();
+        this.updateObject = new OldHinduLunar();
+        this.searchObject = new OldHinduLunar();
+        this.deleteObjects = [];
+      case "OldHinduLunarMoonphase":
+        this.deleteObjects = new OldHinduLunarMoonphase();
+        this.addObject = new OldHinduLunarMoonphase();
+        this.updateObject = new OldHinduLunarMoonphase();
+        this.searchObject = new OldHinduLunarMoonphase();
+        this.deleteObjects = [];
+      case "OldHinduLunarSpecial":
+        this.deleteObjects = new OldHinduLunarSpecial();
+        this.addObject = new OldHinduLunarSpecial();
+        this.updateObject = new OldHinduLunarSpecial();
+        this.searchObject = new OldHinduLunarSpecial();
         this.deleteObjects = [];
       case "HinduSolar":
         this.deleteObjects = new HinduSolar();

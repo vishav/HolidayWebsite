@@ -167,6 +167,33 @@ export class HinduLunarSpecial {
 
 }
 
+export class OldHinduLunar {
+  id: number;
+  month: number;
+  day: number;
+  offset: number;
+  leapmonth: string;
+}
+
+export class OldHinduLunarMoonphase {
+  id: number;
+  month: number;
+  day: number;
+  moonphase: string;
+  location: string;
+  offset: number;
+  leapmonth: string;
+}
+
+export class OldHinduLunarSpecial {
+  id: number;
+  month: number;
+  day: number;
+  offset: number;
+  leapmonth: string;
+  description: string;
+}
+
 export class HinduSolar {
   id: number;
   month: number;

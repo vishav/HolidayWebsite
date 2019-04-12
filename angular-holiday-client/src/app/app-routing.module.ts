@@ -22,6 +22,9 @@ import {HebrewSpecialComponent} from "./hebrew-special/hebrew-special.component"
 import {HinduLunarComponent} from "./hindu-lunar/hindu-lunar.component";
 import {HinduLunarMoonphaseComponent} from "./hindu-lunar-moonphase/hindu-lunar-moonphase.component";
 import {HinduLunarSpecialComponent} from "./hindu-lunar-special/hindu-lunar-special.component";
+import {OldHinduLunarComponent} from "./old-hindu-lunar/old-hindu-lunar.component";
+import {OldHinduLunarMoonphaseComponent} from "./old-hindu-lunar-moonphase/old-hindu-lunar-moonphase.component";
+import {OldHinduLunarSpecialComponent} from "./old-hindu-lunar-special/old-hindu-lunar-special.component";
 import {HinduSolarComponent} from "./hindu-solar/hindu-solar.component";
 import {HinduSolarSpecialComponent} from "./hindu-solar-special/hindu-solar-special.component";
 import {IslamicComponent} from "./islamic/islamic.component";
@@ -52,6 +55,9 @@ const routes: Routes = [
   { path: 'hinduLunar',component: HinduLunarComponent},
   { path: 'hinduLunarMoonphase',component: HinduLunarMoonphaseComponent},
   { path: 'hinduLunarSpecial',component: HinduLunarSpecialComponent},
+  { path: 'oldHinduLunar',component: OldHinduLunarComponent},
+  { path: 'oldHinduLunarMoonphase',component: OldHinduLunarMoonphaseComponent},
+  { path: 'oldHinduLunarSpecial',component: OldHinduLunarSpecialComponent},
   { path: 'hinduSolar',component: HinduSolarComponent},
   { path: 'hinduSolarSpecial',component: HinduSolarSpecialComponent},
   { path: 'islamic',component: IslamicComponent},

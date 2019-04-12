@@ -61,6 +61,9 @@ import { HinduSolarSpecialComponent } from './hindu-solar-special/hindu-solar-sp
 import { IslamicComponent } from './islamic/islamic.component';
 import { IslamicSpecialComponent } from './islamic-special/islamic-special.component';
 import { RegionsComponent } from './regions/regions.component';
+import { OldHinduLunarComponent } from './old-hindu-lunar/old-hindu-lunar.component';
+import { OldHinduLunarMoonphaseComponent } from './old-hindu-lunar-moonphase/old-hindu-lunar-moonphase.component';
+import { OldHinduLunarSpecialComponent } from './old-hindu-lunar-special/old-hindu-lunar-special.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -108,6 +111,9 @@ import { RegionsComponent } from './regions/regions.component';
     IslamicComponent,
     IslamicSpecialComponent,
     RegionsComponent,
+    OldHinduLunarComponent,
+    OldHinduLunarMoonphaseComponent,
+    OldHinduLunarSpecialComponent,
 
 ],
   imports: [
